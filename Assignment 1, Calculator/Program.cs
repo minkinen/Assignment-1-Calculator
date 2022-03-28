@@ -25,7 +25,7 @@ namespace Calculator
             Console.WriteLine("");
             Console.WriteLine("                                 Gör en räkneoperation med två tal");
             Console.WriteLine("            Du kan använda ett av de fyra räknesätten + - * /");
-            Console.WriteLine("                        Använd mellanslag när du skriver ut det du vill beräkna");
+            Console.WriteLine("                        Använd mellanslag mellan siffrorna och operatorn och tyck Enter");
             Console.Write("                Exempelvis:");
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("        2022 - 1973");
@@ -34,9 +34,9 @@ namespace Calculator
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("           25 * -4");
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write("                                10 / 0,02           ");
+            Console.Write("                                10 / 0,02            ");
             Console.ResetColor();
-            Console.WriteLine("Skriv A för att Avsluta");
+            Console.WriteLine("Skriv A och tryck Enter för att Avsluta");
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
