@@ -48,7 +48,7 @@ namespace Calculator
             {
                 Console.Clear();
                 string[] inputElement = str.Split(' ');
-                var totalElements = inputElement.Count();
+                var totalElements = inputElement.Length;
                 if (totalElements == 3)
                 {
                     if (double.TryParse(inputElement[0], out double valueA) && double.TryParse(inputElement[2], out double valueB))
@@ -120,11 +120,11 @@ namespace Calculator
             }
         }
 
-        private static Random _random = new Random();
+        private static readonly Random randomColor = new();
         private static ConsoleColor GetRandomConsoleColor()
         {
             var consoleColors = Enum.GetValues(typeof(ConsoleColor));
-            return (ConsoleColor)consoleColors.GetValue(_random.Next(consoleColors.Length));
+            return (ConsoleColor)consoleColors.GetValue(randomColor.Next(consoleColors.Length));    //Visual Studio gives me a squiggly line with a comment here, that I don't understand.
         }
     } 
 }
