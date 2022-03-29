@@ -69,6 +69,8 @@ namespace Calculator
                                 Division(valueA, operation, valueB);
                                 return true;
                             default:
+                                Console.WriteLine("");
+                                Console.WriteLine(" " + inputElement[0] + " " + inputElement[1] + " " + inputElement[2] + " = Ej korrekt räknesätt");
                                 return true;
                         }
                     }
