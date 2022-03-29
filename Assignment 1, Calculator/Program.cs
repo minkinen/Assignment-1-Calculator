@@ -47,6 +47,7 @@ namespace Calculator
             if (str != "a" && str != "A")
             {
                 Console.Clear();
+                Console.WriteLine("");
                 string[] inputElement = str.Split(' ');
                 var totalElements = inputElement.Length;
                 if (totalElements == 3)
@@ -69,21 +70,18 @@ namespace Calculator
                                 Division(valueA, operation, valueB);
                                 return true;
                             default:
-                                Console.WriteLine("");
                                 Console.WriteLine(" " + inputElement[0] + " " + inputElement[1] + " " + inputElement[2] + " = Ej korrekt räknesätt");
                                 return true;
                         }
                     }
                     else
                     {
-                        Console.WriteLine("");
                         Console.WriteLine(" " + inputElement[0] + " " + inputElement[1] + " " + inputElement[2] + " = Ej korrekta tal (använd , vid decimaltal)");
                         return true;
                     }
                 }
                 else
                 {
-                    Console.WriteLine("");
                     Console.WriteLine("");
                     return true;
                 }
@@ -95,29 +93,24 @@ namespace Calculator
         }
         private static void Addition(double valueA, string operation, double valueB)
         {
-            Console.WriteLine("");
             Console.WriteLine(" " + valueA + " " + operation + " " + valueB + " = " + (valueA + valueB));
         }
         private static void Subtraction(double valueA, string operation, double valueB)
         {
-            Console.WriteLine("");
             Console.WriteLine(" " + valueA + " " + operation + " " + valueB + " = " + (valueA - valueB));
         }
         private static void Multiplication(double valueA, string operation, double valueB)
         {
-            Console.WriteLine("");
             Console.WriteLine(" " + valueA + " " + operation + " " + valueB + " = " + (valueA * valueB));
         }
         private static void Division(double valueA, string operation, double valueB)
         {
             if (valueB != 0)
             {
-                Console.WriteLine("");
                 Console.WriteLine(" " + valueA + " " + operation + " " + valueB + " = " + (valueA / valueB));
             }
             else
             {
-                Console.WriteLine("");
                 Console.WriteLine(" " + valueA + " " + operation + " " + valueB + " = Det går inte att dividera med 0");
             }
         }
