@@ -48,13 +48,12 @@ namespace Calculator
             {
                 Console.Clear();
                 Console.WriteLine("");
-                string[] inputElement = input.Split(' ');
-                var totalElements = inputElement.Length;
-                if (totalElements == 3)
+                string[] inputElements = input.Split(' ');
+                if (inputElements.Length == 3)
                 {
-                    if (double.TryParse(inputElement[0], out double valueA) && double.TryParse(inputElement[2], out double valueB))
+                    if (double.TryParse(inputElements[0], out double valueA) && double.TryParse(inputElements[2], out double valueB))
                     {
-                        string operation = inputElement[1];
+                        string operation = inputElements[1];
                         switch (operation)
                         {
                             case "+":
@@ -70,13 +69,13 @@ namespace Calculator
                                 Division(valueA, operation, valueB);
                                 return true;
                             default:
-                                Console.WriteLine(" " + inputElement[0] + " " + inputElement[1] + " " + inputElement[2] + " = Ej korrekt räknesätt");
+                                Console.WriteLine(" " + inputElements[0] + " " + inputElements[1] + " " + inputElements[2] + " = Ej korrekt räknesätt");
                                 return true;
                         }
                     }
                     else
                     {
-                        Console.WriteLine(" " + inputElement[0] + " " + inputElement[1] + " " + inputElement[2] + " = Ej korrekta tal (använd , vid decimaltal)");
+                        Console.WriteLine(" " + inputElements[0] + " " + inputElements[1] + " " + inputElements[2] + " = Ej korrekta tal (använd , vid decimaltal)");
                         return true;
                     }
                 }
