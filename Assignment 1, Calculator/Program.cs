@@ -12,10 +12,10 @@ namespace Calculator
         {
             Console.WriteLine("");
             Console.WriteLine("");
-            bool runCaluculator = true;
-            while (runCaluculator)
+            bool runCalculator = true;
+            while (runCalculator)
             {
-                runCaluculator = ShowCalculatorDisplay();
+                runCalculator = ShowCalculatorDisplay();
             }
         }
         private static bool ShowCalculatorDisplay() 
