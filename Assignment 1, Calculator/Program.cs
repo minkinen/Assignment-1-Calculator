@@ -12,13 +12,13 @@ namespace Calculator
         {
             Console.WriteLine("");
             Console.WriteLine("");
-            bool showMenu = true;
-            while (showMenu)
+            bool runCaluculator = true;
+            while (runCaluculator)
             {
-                showMenu = MainMenu();
+                runCaluculator = ShowCalculatorDisplay();
             }
         }
-        private static bool MainMenu() 
+        private static bool ShowCalculatorDisplay() 
         {
             Console.ResetColor();
             Console.WriteLine("");
@@ -43,12 +43,12 @@ namespace Calculator
             Console.WriteLine("");
             Console.Write("                 ");
             Console.ForegroundColor = GetRandomConsoleColor();
-            string str = Console.ReadLine();                        //Visual Studio gives me a squiggly line with a comment here, that I don't understand.
-            if (str != "a" && str != "A")
+            string input = Console.ReadLine();                        //Visual Studio gives me a squiggly line with a comment here, that I don't understand.
+            if (input != "a" && input != "A")
             {
                 Console.Clear();
                 Console.WriteLine("");
-                string[] inputElement = str.Split(' ');
+                string[] inputElement = input.Split(' ');
                 var totalElements = inputElement.Length;
                 if (totalElements == 3)
                 {
