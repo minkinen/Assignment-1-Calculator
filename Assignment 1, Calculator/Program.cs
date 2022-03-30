@@ -37,12 +37,12 @@
             Console.WriteLine("");
             Console.Write("                 ");
             Console.ForegroundColor = GetRandomConsoleColor();
-            string input = Console.ReadLine();                        //Visual Studio gives me a squiggly line with a comment here, that I don't understand.
+            string input = Console.ReadLine();                        //Visual Studio gives me a squiggly green line with a comment here, that I don't understand.
             if (input != "a" && input != "A")
             {
                 Console.Clear();
                 Console.WriteLine("");
-                string[] inputElements = input.Split(' ');
+                string[] inputElements = input.Split(' ');              //Visual Studio gives me a squiggly green line with a comment here, that I don't understand.
                 if (inputElements.Length == 3)
                 {
                     if (double.TryParse(inputElements[0], out double valueA) && double.TryParse(inputElements[2], out double valueB))
@@ -107,12 +107,11 @@
                 Console.WriteLine(" " + valueA + " " + operation + " " + valueB + " = Det går inte att dividera med 0");
             }
         }
-
-        private static readonly Random randomColor = new();
         private static ConsoleColor GetRandomConsoleColor()
         {
+            Random randomColor = new Random();
             var consoleColors = Enum.GetValues(typeof(ConsoleColor));
-            return (ConsoleColor)consoleColors.GetValue(randomColor.Next(consoleColors.Length));    //Visual Studio gives me a squiggly line with a comment here, that I don't understand.
+            return (ConsoleColor)consoleColors.GetValue(randomColor.Next(consoleColors.Length));    //Visual Studio gives me a squiggly green line with a comment here, that I don't understand.
         }
     } 
 }
